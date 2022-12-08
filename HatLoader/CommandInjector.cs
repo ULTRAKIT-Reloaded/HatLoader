@@ -33,11 +33,14 @@ namespace HatLoader
 
         public void Execute(GameConsole.Console con, string[] args)
         {
+            con.PrintLine("christmas");
+            con.PrintLine("halloween");
+            con.PrintLine("easter");
+
             foreach (HatRegistry hat in ULTRAKIT.Loader.HatLoader.registries)
             {
                 con.PrintLine(hat.hatID);
             }
-            ULTRAKIT.Loader.HatLoader.SetAllActive(args[0], bool.Parse(args[1]));
         }
     }
 }
