@@ -15,3 +15,5 @@ Currently, the only way to enable hats is using console commands. Press F8 to ac
 `gethats` displays a list of all Hat IDs currently loaded.
 
 `hatstate <hatID> <true/false>` activates/deactivates the specified hat.
+
+`keephats <true/false>` keeps the current hat setup between level loads/restarts.
