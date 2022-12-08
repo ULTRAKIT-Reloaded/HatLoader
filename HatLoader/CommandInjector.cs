@@ -18,10 +18,11 @@ namespace HatLoader
         {
             if (args.Length < 2)
             {
-                con.PrintLine("Usage: hatstate <hatID> <active>");
+                con.PrintLine("Usage: hatstate <hatID> <active [true/false]>");
                 return;
             }
-            ULTRAKIT.Loader.HatLoader.SetAllActive(args[0], bool.Parse(args[1]));
+            bool active = bool.Parse(args[1]);
+            ULTRAKIT.Loader.HatLoader.SetAllActive(args[0], active);
         }
     }
 
@@ -41,6 +42,23 @@ namespace HatLoader
             {
                 con.PrintLine(hat.hatID);
             }
+        }
+    }
+
+    public class PersistentHats : ICommand
+    {
+        public string Name => "Persistent Hats";
+        public string Description => "Toggles hats persistent between loads.";
+        public string Command => "keephats";
+
+        public void Execute(GameConsole.Console con, string[] args)
+        {
+            if (args.Length < 1)
+            {
+                con.PrintLine("Usage: keephats <true/false>");
+                return;
+            }
+            ULTRAKIT.Loader.HatLoader.Persistent = bool.Parse(args[0]);
         }
     }
 }

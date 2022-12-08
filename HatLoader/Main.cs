@@ -10,6 +10,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using System.IO;
 using ULTRAKIT.Extensions;
+using ULTRAKIT.Data;
 
 namespace HatLoader
 {
@@ -18,7 +19,10 @@ namespace HatLoader
     {
         public override void OnModLoaded()
         {
-            SceneManager.sceneLoaded += OnSceneLoaded;
+            GameConsole.Console.Instance.RegisterCommand(new SetHatState());
+            GameConsole.Console.Instance.RegisterCommand(new GetHatIDs());
+            GameConsole.Console.Instance.RegisterCommand(new PersistentHats());
+
             List<AssetBundle> bundles = new List<AssetBundle>();
 
             string dir = $@"{modFolder}\HatBundles";
@@ -41,18 +45,6 @@ namespace HatLoader
             {
                 ULTRAKIT.Loader.HatLoader.LoadHats(bundle);
             }
-        }
-
-        public override void OnModUnload()
-        {
-            PlayerPrefs.SetInt("CurSlo", 1);
-            SceneManager.sceneLoaded -= OnSceneLoaded;
-        }
-
-        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-        {
-            GameConsole.Console.Instance.RegisterCommand(new SetHatState());
-            GameConsole.Console.Instance.RegisterCommand(new GetHatIDs());
         }
     }
 }
