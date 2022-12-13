@@ -15,7 +15,7 @@ using ULTRAKIT.Data;
 namespace HatLoader
 {
     [UKDependency("petersone1.ultrakitreloaded", "1.3.1")]
-    [UKPlugin("petersone1.hatloader", "Hat Loader", "1.0.0", "Loads custom hat bundles using ULTRAKIT Reloaded", false, false)]
+    [UKPlugin("petersone1.hatloader", "Hat Loader", "1.1.0", "Loads custom hat bundles using ULTRAKIT Reloaded", false, false)]
     public class Plugin : UKMod
     {
         public override void OnModLoaded()
