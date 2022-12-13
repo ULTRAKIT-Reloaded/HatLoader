@@ -3,7 +3,7 @@ Loads custom hat bundles into ULTRAKILL and provides a means to activate/deactiv
 
 # Installation
 1. Download and install [UMM](https://github.com/Temperz87/ultra-mod-manager) using the provided instructions.
-2. Download and install [ULTRAKIT Reloaded](https://github.com/PetersonE1/UltrakitReloaded) (minimum version 1.3.1) using the provided instructions.
+2. Download and install [ULTRAKIT Reloaded](https://github.com/PetersonE1/UltrakitReloaded) (minimum version 1.3.2) using the provided instructions.
 3. Go to the releases page and download HatLoader.zip
 4. Extract the contents of HatLoader.zip into [Your ULTRAKILL Directory]\BepInEx\UMM Mods\
 
