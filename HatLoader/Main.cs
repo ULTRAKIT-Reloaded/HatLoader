@@ -14,7 +14,7 @@ using ULTRAKIT.Data;
 
 namespace HatLoader
 {
-    [UKDependency("petersone1.ultrakitreloaded", "1.3.2")]
+    //[UKDependency("petersone1.ultrakitreloaded", "1.3.2")]
     [UKPlugin("petersone1.hatloader", "Hat Loader", "1.1.0", "Loads custom hat bundles using ULTRAKIT Reloaded", false, false)]
     public class Plugin : UKMod
     {
@@ -44,7 +44,7 @@ namespace HatLoader
 
             foreach (AssetBundle bundle in bundles)
             {
-                ULTRAKIT.Loader.HatLoader.LoadHats(bundle);
+                ULTRAKIT.Loader.Loaders.HatLoader.LoadHats(bundle);
             }
         }
     }
