@@ -22,7 +22,7 @@ namespace HatLoader
                 return;
             }
             bool active = bool.Parse(args[1]);
-            ULTRAKIT.Loader.HatLoader.SetAllActive(args[0], active);
+            ULTRAKIT.Loader.Loaders.HatLoader.SetAllActive(args[0], active);
         }
     }
 
@@ -38,7 +38,7 @@ namespace HatLoader
             con.PrintLine("halloween");
             con.PrintLine("easter");
 
-            foreach (HatRegistry hat in ULTRAKIT.Loader.HatLoader.registries)
+            foreach (HatRegistry hat in ULTRAKIT.Loader.Registries.hat_registries)
             {
                 con.PrintLine(hat.hatID);
             }
@@ -58,7 +58,7 @@ namespace HatLoader
                 con.PrintLine("Usage: keephats <true/false>");
                 return;
             }
-            ULTRAKIT.Loader.HatLoader.Persistent = bool.Parse(args[0]);
+            ULTRAKIT.Loader.Loaders.HatLoader.Persistent = bool.Parse(args[0]);
         }
     }
 }
